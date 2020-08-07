@@ -1,0 +1,44 @@
+Henry
+Homework 01 - Git.
+
+> COMANDOS DE GIT:
+List: nos permite ver el contenido de la carpeta donde nos encontramos.
+$ ls 
+ Change Directory:  nos permite movernos a una carpeta nueva o directorio.
+$ cd [nombre de la carpeta]
+Make Directory: crea una nueva carpeta en el directorio donde nos encontramos actualmente.
+$ mkdir [nombre de la carpeta]
+Touch: crea un nuevo archivo dentro de una carpeta.
+$ touch [nombre del archivo]
+Remove: elimina permanente un archivo (no elimina carpeta).
+$ rm [nombre del archivo]
+
+> PASOS:
+1°. Vemos en qué carpeta nos encontramos.
+$ ls
+2°. Para ir cambiando de carpeta.
+$ cd
+3°. Vamos a GitHub
+4°. Creamos un repositorio.
+5°. Copiamos la url del repositorio.
+6°. Clonamos el repositorio.
+$ git cone [URL - shif + ins]
+7°. Entramos a la carpeta clonada.
+ $cd [nombre de la carpeta clonada]
+8°. Añadimos un nuevo archivo a nuestro proyecto.
+$ touch [nombre del archivo nuevo]
+9°. Vemos los cambios hechos en el repositorio loca - Usamos "status" si no estamos seguros de que algo haya funcionado.
+$ git status
+10°. Agregamos los cambios al historial.
+$ git add . ( agrega todos los archivos de la carpeta)
+$ git add [nombre del archivo nuevo] (agrega el archivo mensionado)
+11°. Agreamos nuevos archivos "commit" agarra todos nuestros cambios y los guarda en el historial de git.
+$ git commit -m
+12°. Guaramos nuestros cambios locales y lo compartimos en GitHub.
+$git push
+
+
+
+
+
+
