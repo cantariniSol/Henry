@@ -1,0 +1,72 @@
+1. En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+*FOR:
+for es una estructura que permite realizar repeticiones de una manera muy fácil.
+A for se le define como un estructura bucle en la que mientras la condición indicada se cumpla,  for va seguir ejecutando las instrucción dentro del bloque.
+for (inicialización; condición; contador){
+código...
+}
+la estructura repetitiva for comienza por una inicialización de una variable (ejemplo n = 0) esta variable permite llevar la cantidad de repeticiones del código dentro de for.
+Luego le precede la condición(ejemplo n < 10). Esta condición determina si el bucle continua ejecutados porque le condición no se cumple o se detiene ya que la condición se cumple. 
+Y por último tenemos el contador (ejemplo n++). Este contador o también llamada actualización va contando las veces que se va ejecutando el código, es decir asigna después de cada repetición un nuevo valor que va sumando a la variable que controla la repetición para que llegué a cumplir la conción.
+Ejemplo de contrustor for:
+for(  var n = 0; n < 10; n ++){
+código...
+}
+* &&, ||, !:
+>>&& (AND)  es un operador lógico, cundo trabajamos con operadores lógicos usamos  valores TRUE o FALSE, así cuando usamos operadores como +, -, *,/, & trabajamos con tipos/valores numéricos -2,-1,0,1,2,3... Cuando usamos los operadores lógicos usamos tipo/valores booleanos TRUE o FALSE.
+&& solo es TRUE si y sólo si los dos valores son TRUE.
+Para verlo esto mejor podemos construir una tabla de verdad.
+variableP	variableQ 	variableP && variableQ
+T 		      T   	         T
+T		      F                  F	
+F		     T	    		 F
+F		     F		         F
+Ejemplo del operador lógico &&(AND):
+var variableUno = true;
+var variableDor = false;
+resultado = variableUno && variableDos; // El resultado es false.
+
+var variableA = true;
+var variableB = true;
+resultado = variableA && varaibleB // El resultado es true.
+>> ||(OR) es un operador lógico, el cual trabaja con dos valores lógicos (true ó false), el operador || solo es FALSE si y solo si los dos valores de las variables son falsas, otra forma de decirlo es el resultado de || es TRUE si una( las dos, o sólo una) de las variables es TRUE. 
+Veámoslo con una tabla de verdad:
+variableP	variableQ 	variableP && variableQ
+T 		      T   	          T
+T		      F                   T	
+F		      T	    		  T
+F		      F		          F
+Ejemplo del operador ||(OR):
+var estaLloviendo = true;
+var estaNevando= false;
+resultado = estaLloviendo || estaNevando // Cómo el resultado puede ser uno ó el otro, la respuesta es TRUE.
+var esMayo = false;
+var esNoviembre = false;
+resultado =  esMayo || esNoviembre // el resultado es false;
+
+>> OPERADOR LÓGICO ! (NOT):
+A NOT o tabién llamado NEGACIÓN lo podemos utilizar  para conseguir el valor opuesto/contrario del valor de una variable.
+Veamoslo en una tabla de verdad.
+variableP	!variableP	
+T 		      F
+F		      T
+Al trabajar con el operador !(NOT) resulta saber cuál es la negación de una variable que tiene como valor un tipo booleano.
+Pero...¿qué pasaría si el valor de la variable es de otro tipo cómo numérico o es un char o una String?
+Bueno lo que hace el cumplidor de JS es convertir esas variables de tipo Numérico, Char o String es un valor booleano.
+Si la variable le asignamos un número, el compilador de JS convierte a esa variable en false en caso de ser 0 ó en true para cualquier otro número destino a 0.
+Si la variable que inicializamos es de tipo String o Char,  tendrá un valor  false si la cadena o el carácter es vacío, o en true en cualquier otro caso distinto a vació.          
+Ejemplo del operador !(NOT):
+var telePrendido = true;
+resultado = !telePrendido// La respues es false.
+
+
+var num = 0;
+resultado = !num // La respuesta es true.
+var num = 11;
+resultado = !num // La respues es  false.
+
+
+var textUno = "";
+mensaje = !textUno // La respuesta es true.
+var textDos = 'Hola, todo bien?';
+mensaje = !textDos //La respuesta es false;
