@@ -1,0 +1,28 @@
+1. En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+*FUNCIONES CALLBACK:
+Las funciones conocidas como callback, son funciones que se pasan como parámetro de otras funciones y que se ejecutan dentro de estas.
+Cuando estamos trabajando con arrays y utilizamos funciones como forEach() o map(), estamos pasando una función como parámetro de otra, que se ejecuta por cada uno de los elementos del array.
+
+>>Por ejemplo:
+function ejemplo1(cb){
+    cb();
+}
+ejemplo1(function(){
+    console.log('Hola!');
+});
+Esto devuelve ---> Hola!
+Lo que hacemos aquí es definir una función ejemplo1 que toma como parámetro otra función, que la llamamos cb (aunque la podría haber llamado como quisiera). Lo que estamos diciendo es que dentro de `ejemplo1` se ejecuta `cb` y por lo tanto cuando invoquemos a `ejemplo1`, sabemos que tenemos que pasarle como parametro una función (la que yo quiera). La función que le pasemos se ejecutará dentro de la función`ejemplo1`.
+En el ejemplo de arriba le pasamos una función anónima que muestra por consola la palabra 'Hola!'.
+
+Otra cosa a tener en cuenta es que las funciones callback, como cualquier otra función, puede tomar parámetros.
+>>Por ejemplo:
+function ejemplo2(fn){
+var nombre = 'Solchus';
+fn(nombre);
+};
+ejemplo2(function fn(n){
+console.log('Hola ' + n + '!');
+});
+Devuelve ----> Hola Solchus!
+El callback se ejecutará tomando como parámetro el nombre "Solchus" cuando sea ejecutada la función ejemplo2.
+Por lo tanto, cuando ejecutamos la función `ejemplo2`, sabemos que ésta toma como argumento una función callback con un nombre de argumento. De esta forma, podemos saludar utilizando el nombre definido dentro de `ejemplo2`.

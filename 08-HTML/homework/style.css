@@ -1,0 +1,22 @@
+
+h1{
+    color: rgb(212, 163, 29);
+}
+
+img{
+    width: 400px; /* ancho */
+}
+
+/* Al ser una id se accede con # */
+#thirdDiv{
+    background: rgb(212, 70, 18);
+    height: 550px;
+    width: 600px;
+    padding: 50px;
+    border: 10px solid black;
+}
+
+#spanId{
+    font-size: 20px;
+    margin: 50px;
+}

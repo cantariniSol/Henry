@@ -1,0 +1,24 @@
+1. En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+*PROTOTYPE:
+
+Es un poderoso y potencialmente  peligroso mecanismo que permite extender o sobreescribir el comportamiento de un objeto.
+Las clases tienen una forma única de establecer un método una vez y dar acceso a cada objeto de esa clase  a esos métodos. Esto se llama prototype. Cada clase tiene tiene una propiedad prototype, que luego podemos establecer en métodos:
+>>Por ejemplo:
+function Usuario(nombre, github){
+this.nombre = nombre;
+this.gitHub = github;
+}
+Usuario.prototype.introduccion = function(){
+return 'Mi nombre es: ' + this.nombre + ', mi usuario de GitHub es: ' + this.gitHub;
+}
+let juan = new Usuario('Juan', 'juan.perez');
+console.log(juan.introduccion()); // Mi nombre es Juan, mi usuario de Github es juan.perez.
+
+*CONSTRUCTORS(DE CLASES):
+
+El método constructor es un metodo especial para crear e inicializar un objeto creado a partir de una clase.
+constructor([argumentos]) { ... }
+Sólo puede haber un método especial con el nombre de "constructor" en una clase. Un error de sintaxis será lanzado, si la clase contiene más de una ocurrencia de un método constructor.
+Un constructor puede utilizar la palabra clave super para llamar al constructor de una clase padre.
+Si no especifica un método constructor, se utiliza un constructor predeterminado.

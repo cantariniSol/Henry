@@ -1,0 +1,58 @@
+1. En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+	* OBJETOS:
+Un objeto es bloque que contiene una colección de propiedades y una propiedad es una asociación entre nombre(o clave) y un valor. Un valor de una propiedad puede ser de tipo int, string, boolean, arrays, funciones. En otras palabras,  es una agupación de propiedades encapusuladas en un bloque, de esta manera se genera un modelo ciertas carácterisiticas de una realidad.
+Ejemplo de OBJETOS:
+var empleado = {
+id: 1233,
+nombre: 'Faustino',
+apellido: 'Giordano'
+dni: 367324353
+}
+	* PROPIEDADES: 
+Las propiedades modifican los objetos, de esta menera una propiedad es una colección de atributos que podemos especificar en  los objetos.
+Como en el ejemplo anterior las propiedades del objeto 'empleado', son id, nombre, apellido, dni, y estas propiedades tiene valores, como por ejemplo:
+La propiedad id tiene el valor de 12333, y la propiedad nombre es de tipo String....etc
+Las propiedades puede ser de tipo arrays de objetos, funciones también.
+Por ejemplo:
+var lienaTelefonica = {
+numeroDeLinea: 03515594932,
+titular: 'Camila Nardelli',
+saludoPersonas: function(){
+return 'Hola Soy Camila deja tu mensaje después de la señal'
+},
+contactos: [ {nombre: Eugenia , numero: 351267435, emial: 'euge@gmal.com'}, {nombre: Thiago, numero: 3512675, emial: 't.caspio@gmail.com'}],
+}
+
+	* MÉTODOS:
+Los métodos son una capacidad de un objeto. Son acciones que esos objetos pueden hacer, o que se les pueden hacer a ellas.
+var despertador = {
+hora: 12
+minutos: 43
+dia: 12
+mes:  Noviembre
+mensajeAlentador: funtion(){
+return 'Buuuen día mi gente, buen día!!...Son las' +  hora + ' y ' + minutos + 'minutos';
+}
+	* BUCLE `FOR...IN`:
+La sentencia for...in itera sobre todos los elementos de un objeto, en un orden arbitrario. Para cada uno de los elementos, se ejecuta la sentencia especificada.
+La siguiente función toma como argumento un objeto. Entonces itera sobre todas las propiedades del objeto y devuelve una cadena que lista los nombres de las propiedades y sus valores. Para facilitar la impresión de las propiedades en la cadena de texto del console.log se utilizan Plantillas de cadena de texto.
+var obj = {a: 1, b: 2, c: 3};
+for (const prop in obj) {
+  console.log(`obj.${prop} = ${obj[prop]}`);
+}
+// Salida:
+// "obj.a = 1"
+// "obj.b = 2"
+// "obj.c = 3"
+	* NOTACIÓN DE PUNTOS Ó NOTACIÓN DE CORCHETES:
+Una vez que tengamos los pares clave-valor, podemos acceder a esos valores llamando al nombre del objeto y la clave. Hay dos formas diferentes de hacer esto, usando puntos o usando corchetes.
+Con la NOTACIÓN DE PUNTOS podemos llamar al nombre del objeto, un punto y el nombre de la clave. Así como llamamos a la propiedad .length en una matriz. La propiedad de longitud es un par de clave-valor.
+user.lovesJavascript; // true
+user.username;        // juan.perez
+La NOTACIÓN DE CORCHETES es como llamar a un elemento en una matriz, aunque con corchetes debemos usar una cadena o número, o una variable que apunte a una cadena o número. Se puede llamar a cada clave envolviéndola con comillas:
+const passString = 'password';
+user['lovesJavascript']; // true
+user['username'];        // juan.perez
+user[passString];        // loremipsumpwd123
+Generalmente, verás que los corchetes casi siempre se usan con variables.
